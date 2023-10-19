@@ -1,0 +1,62 @@
+body {
+  font-family: 'Times New Roman', serif;
+}
+
+.full {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  overflow-x: hidden;
+  padding-top: 0px;
+  position: fixed;
+}
+
+.split {
+  width: 50%;
+  top: 0;
+  z-index: 1;
+  padding-top: 0px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.data {
+  background-image: url("data1.jpg");
+  background-size: cover;
+}
+
+.model {
+  background-image: url("ai1.webp");
+  background-size: cover;
+}
+
+.attack {
+  background-image: url("attack1.jpg");
+  background-size: cover;
+}
+
+.black {
+  background-color: black;
+}
+
+.header {
+  width: 100%;
+}
+
+.padded {
+  padding-top:0.8%;
+  padding-bottom:0.8%;
+  padding-right:0.8%;
+  padding-left:0.8%;
+}
+
+.white {
+  color: white;
+}

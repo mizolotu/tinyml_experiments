@@ -1,0 +1,32 @@
+{
+    "config": {
+        "main_stack_size": {
+            "value": 4096
+        }
+    },
+    "target_overrides": {
+        "*": {
+            "target.printf_lib": "std",
+            "platform.stdio-convert-newlines": true,
+            "platform.stdio-baud-rate": 115200,
+            "platform.default-serial-baud-rate": 115200,
+            "mbed-trace.enable": true,
+            "mbed-trace.max-level": "TRACE_LEVEL_DEBUG",
+            "platform.error-filename-capture-enabled": true,
+            "lora.over-the-air-activation": true,
+            "lora.duty-cycle-on": false,
+            "lora.phy": "EU868",
+            "lora.device-eui": "{ 0xAA, 0xBB, 0xCC, 0xDD, 0x33, 0x33, 0x33, 0x33 }",
+            "lora.application-eui": "{ 0xAA, 0xBB, 0xCC, 0xDD, 0x33, 0x33, 0x33, 0x33 }",
+            "lora.application-key": "{ 0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 0x33, 0x33, 0x33, 0x33, 0x33, 0x33, 0x33, 0x33, 0x33, 0x33, 0x33}",
+            "lora.adr-on": 0
+        },
+        "LORA_E5_MINI": {
+            "stm32wl-lora-driver.rf_switch_config": "RBI_CONF_RFO_HP",
+            "stm32wl-lora-driver.debug_tx": "LED1"
+        }
+    },
+    "macros": [
+        "MBEDTLS_USER_CONFIG_FILE=\"mbedtls_lora_config.h\""
+    ]
+}
