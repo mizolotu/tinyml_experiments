@@ -16,7 +16,7 @@ server = 'tcp:jyusqlserver.database.windows.net'
 database = 'IoTSQL'
 driver = '{ODBC Driver 17 for SQL Server}'
 username = 'jyusqlserver'
-password = ''
+password = '#jyusql1'
 db_connection_str = f'DRIVER={driver};SERVER={server};PORT=1433;DATABASE={database};UID={username};PWD={password}'
 
 # database tables
@@ -106,8 +106,8 @@ def generate_html(url, params):
         for i, ax in enumerate(axes):
 
             #ax.bar(x, avg_currents, color='b', label='Average')
-            ax.plot(x, data_to_plot[i]['avg'], colors[i], label='Average')
-            ax.fill_between(x, data_to_plot[i]['min'], data_to_plot[i]['max'], facecolor=colors[i], alpha=0.3, label='Min/max')
+            ax.plot(x, data_to_plot[i]['avg'][timestamps_u_idx], colors[i], label='Average')
+            ax.fill_between(x, data_to_plot[i]['min'][timestamps_u_idx], data_to_plot[i]['max'][timestamps_u_idx], facecolor=colors[i], alpha=0.3, label='Min/max')
             ax.set_xlim([x[0], x[-1]])
             ax.set_xticks(xticks)
             ax.set_xticklabels(xticklabels)
